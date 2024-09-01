@@ -1,4 +1,5 @@
 import {Component} from "react"
+import {Link} from "react-router-dom"
 
 import withRouter from  "../WrapperRouting/withRouter"
 
@@ -79,7 +80,7 @@ class SignUp extends Component {
                     <div className="button-sontainer">
                     
                     <button className="signup-button" >Sign Up</button>
-                    <button className="already-have-account">Already Have Account?</button>
+                    <button className="already-have-account" onClick={()=> this.props.navigate("/levon/login")}>Already Have Account?</button>
                     </div>
 
                 </form>
