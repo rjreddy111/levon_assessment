@@ -1,0 +1,46 @@
+.user-sign-main-bg {
+    background-color: rgb(67, 65, 65);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #b5b0b0;
+    padding: 30px 15px 30px 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px;
+    border: 1px solid #ffffff;
+
+}
+
+.user-input {
+    height: 30px;
+    width: 80%;
+    border-radius: 5px;
+    border: none;
+    margin-top: 2px;
+}
+
+.button-sontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-button {
+    background-color: rgb(9, 62, 132);
+    width: 100px;
+    height: 35px;
+    margin-top: 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    border:none
+}
+
+.already-have-account {
+    background-color: #b5b0b0;
+    border: none;
+}

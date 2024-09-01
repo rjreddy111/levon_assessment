@@ -1,0 +1,14 @@
+.student-list-add {
+    background-color: rgb(37, 36, 36);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-submission {
+    background-color: aqua;
+    width: 50%;
+    padding: 20px;
+    border-radius: 5px;
+}

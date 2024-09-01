@@ -1,0 +1,38 @@
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 18px;
+    
+}
+
+.tbody-style {
+    width: 70%;
+    
+}
+
+.list-style {
+    list-style-type: none; 
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.students-list_bg {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+th,td { 
+    border:1px solid black;
+}
+
+td {
+    padding-left: 15px;
+}
+.grade {
+    text-align: center;
+}
