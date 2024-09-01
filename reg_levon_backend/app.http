@@ -1,0 +1,57 @@
+POST  http://localhost:5001/levon/signup
+Content-Type: application/json
+
+{
+    "username" : "rajesh Teacher", 
+    "password" : "Reddy", 
+    "role" : "teacher"
+}
+
+
+### 
+POST  http://localhost:5001/levon/login
+Content-Type: application/json
+
+{
+    "username" : "rajesh Teacher", 
+    "password" : "Reddy"
+    
+}
+
+// student
+###
+POST  http://localhost:5001/students/students/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhanUgVGVhY2hlciIsInJvbGUiOiJ0ZWFjaGVyIiwiaWF0IjoxNzI1MTI0MjA5fQ._LnQyeXU3zLqAKuFscRa7rXUWa9uZtzFvMCXxB86r2o
+Content-Type: application/json 
+
+{
+    "name" : "ShivaS", 
+    "grade" : "VI",
+    "user_id" : 2
+ 
+}
+
+
+###
+GET http://localhost:5001/students/students 
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhanUgUmVkZHkiLCJyb2xlIjoic3R1ZGVudCIsImlhdCI6MTcyNTEyMzEzN30.quBUAtPKIvsmloWc_PS9kuciOaF3JVkdq-X8iYsmsi4
+
+
+
+//teacher
+
+### 
+POST  http://localhost:5001/teachers/teachers/post
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhanVzIFRlYWNoZXIiLCJyb2xlIjoidGVhY2hlciIsImlhdCI6MTcyNTEyNDYxOX0.joT-iXsbycQqxvVUNKLVii9LbOnmmMvtPkayT-9ubww
+Content-Type: application/json 
+
+{
+    "name" : "Raju", 
+    "subject" : "science",
+    "user_id" : "8"
+}
+
+
+### 
+GET http://localhost:5001/teachers/teachers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6IlJhanVzIFRlYWNoZXIiLCJyb2xlIjoidGVhY2hlciIsImlhdCI6MTcyNTEyNDYxOX0.joT-iXsbycQqxvVUNKLVii9LbOnmmMvtPkayT-9ubww
