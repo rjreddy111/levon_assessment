@@ -10,7 +10,10 @@ class Login extends Component {
 
     state = {
         userName : "", 
-        password : ""
+        password : "",
+        show_error:false,
+        error_msg:""
+        
         
     }
 
@@ -28,10 +31,14 @@ class Login extends Component {
  onSubmitSuccess =(jwtToken,role)=> {
     const {navigate} = this.props
     Cookies.set("jwt_token", jwtToken, {expires:30})
+ 
     if (role === "student"){
       return navigate("/students/students")
     } 
     return navigate("/teachers/teachers")
+
+
+
  }
 
 
@@ -57,6 +64,9 @@ class Login extends Component {
         console.log(`data: ${data}`)
         this.onSubmitSuccess(data.jwtToken,payload.role)
     }
+    else {
+        this.setState({show_error:true, error_msg:data.error})
+    }
 
 
 
@@ -65,7 +75,7 @@ class Login extends Component {
 
 
     render(){
-        const {userName,password,role} = this.state
+        const {userName,password,role,show_error,error_msg} = this.state
         console.log(userName,password,role)
         return (
             <div className="user-sign-main-bg">
@@ -85,7 +95,9 @@ class Login extends Component {
                     <div className="button-sontainer">
                     
                     <button className="signup-button" >Sign In</button>
-                    <button className="already-have-account">Dont Have Account?</button>
+                    <button className="already-have-account" onClick={()=> this.props.navigate("/levon/signup")}>Dont Have Account?</button>
+                    {show_error? <p className="err-msg">{error_msg}</p>: ""}
+                    
                     </div>
 
                 </form>

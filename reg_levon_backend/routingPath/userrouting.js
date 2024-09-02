@@ -39,7 +39,7 @@ router.post("/login", async(request,response)=> {
     const dbUserPresent = await request.app.locals.db.get(selectUser) 
     console.log(dbUserPresent)
     if (dbUserPresent===undefined) {
-        response.status(400).json({error_begining:"Invalid user"})
+        response.status(400).json({error:"Invalid user"})
     }
     else {
         const isPasswordMatching = await bcrypt.compare(password,dbUserPresent.password);

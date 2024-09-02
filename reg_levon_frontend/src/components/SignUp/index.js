@@ -1,5 +1,5 @@
 import {Component} from "react"
-import {Link} from "react-router-dom"
+
 
 import withRouter from  "../WrapperRouting/withRouter"
 
@@ -10,7 +10,9 @@ class SignUp extends Component {
     state = {
         userName : "", 
         password : "", 
-        role:""
+        role:"",
+        showError:false,
+        err_msg :""
     }
 
 
@@ -46,8 +48,13 @@ class SignUp extends Component {
        
         this.props.navigate("/levon/login")
         }
+
+        else {
+            this.setState({showError:true,err_msg:data.error})
+        }
         
     }
+    
 
 
 
@@ -56,7 +63,7 @@ class SignUp extends Component {
 
 
     render(){
-        const {userName,password,role} = this.state
+        const {userName,password,role,showError,err_msg} = this.state
         console.log(userName,password,role)
         return (
             <div className="user-sign-main-bg">
@@ -81,6 +88,7 @@ class SignUp extends Component {
                     
                     <button className="signup-button" >Sign Up</button>
                     <button className="already-have-account" onClick={()=> this.props.navigate("/levon/login")}>Already Have Account?</button>
+                    {showError ? <p className="err-msg">{err_msg}</p> : ""}
                     </div>
 
                 </form>

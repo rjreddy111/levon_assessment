@@ -44,3 +44,8 @@
     background-color: #b5b0b0;
     border: none;
 }
+
+.err-msg {
+    color: red;
+    font-size: 8px;
+}

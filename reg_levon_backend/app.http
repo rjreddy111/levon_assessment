@@ -13,7 +13,7 @@ POST  http://localhost:5001/levon/login
 Content-Type: application/json
 
 {
-    "username" : "rajesh Teacher", 
+    "username" : "rajesh Teacherr", 
     "password" : "Reddy"
     
 }
